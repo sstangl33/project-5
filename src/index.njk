@@ -1,0 +1,21 @@
+---
+title: A page for you
+layout: base.njk
+---
+
+<div class="container">
+    <h1>This page is for you!</h1>
+    <div class="stuff">
+        <div class="message">You are ugly, old and fat!</div>
+    </div>
+    <ul>
+        {% for article in news.articles %}
+            <li>
+                <h2><a href="{{ article.url }}">{{ article.title }}</a></h2>
+                <span>{{ article.source.name }} - <time>{{ article.publishedAt }}</time></span>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+npm
+<script src="/js/script.js"></script>
